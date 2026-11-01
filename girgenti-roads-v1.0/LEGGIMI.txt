@@ -1,0 +1,31 @@
+GIRGENTI ROADS™ — versione 1.0
+
+Il runner 3D del Capone per le strade di Agrigento.
+
+COME PUBBLICARLO (come il Super Capone)
+1. Carica TUTTO il contenuto di questa cartella su GitHub (o su Vercel/Cloudflare), nella radice del sito.
+2. Il gioco funziona da solo: index.html contiene già tutto (grafica 3D, font, livelli). Non c'è audio.
+3. Su telefono si può installare come app (manifest + service worker) e parte a schermo intero in orizzontale.
+
+CLASSIFICA MONDIALE (top 10)
+- Usa lo stesso database Firebase del Super Capone, al percorso:  arcade/girgentiroads/top
+- Nelle REGOLE del Realtime Database serve poter leggere e scrivere quel percorso, ad esempio:
+    "arcade": { "girgentiroads": { ".read": true, ".write": true } }
+  Se le regole attuali già coprono "arcade", non serve fare nulla.
+- Se il database non risponde, il gioco mostra la classifica locale (i record di quel telefono) e lo dice.
+- Per ripulire un punteggio falso: dalla console Firebase, apri arcade/girgentiroads/top e cancella la voce.
+
+COME SI GIOCA
+- Tocca (o Spazio) per saltare, tocca ancora in aria per il doppio salto.
+- Si corre da soli. Se un ostacolo ti blocca, lo schermo ti trascina: salta per scavalcarlo. Si perde una vita solo quando esci dallo schermo o cadi in una buca.
+- Tocca le persone per farle unire al gruppo: a fine livello ogni persona vale 100 punti, ogni moneta 10.
+- Ogni 100 monete = 1 vita in più (massimo 5).
+- Ogni livello dura 2 minuti ed è più veloce e più difficile. Il livello cambia anche luce: giorno, pomeriggio, tramonto, notte.
+
+NOVITÀ DEI LIVELLI
+- Autobus CIRCOLARE (servono il doppio salto o il salto sul tetto).
+- Dal livello 2: camion ATO, più buche e auto che vengono contro di te (ti rallentano o ti fermano finché non le scavalchi).
+- Sullo sfondo: Pala Congressi e Stazione FS.
+
+FILE
+index.html · manifest.webmanifest · sw.js · vercel.json · robots.txt · icone · og-image.jpg · font Bungee (licenza OFL).
