@@ -1,8 +1,8 @@
 // Service worker di Girgenti Roads: permette l'installazione come app.
 // La pagina si prende sempre da internet (così gli aggiornamenti arrivano subito); se manca la rete usa la copia salvata.
-const VERSION = "v1.4.1";
+const VERSION = "v1.4.2";
 const CACHE = "girgentiroads-" + VERSION;
-const PRECACHE = ["/", "/giochi.html", "/audio/inferno.mp3", "/icons/icon-192.png", "/icons/icon-512.png"];
+const PRECACHE = ["/", "/audio/inferno.mp3", "/icons/icon-192.png", "/icons/icon-512.png"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("girgentiroads-") && k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", (e) => {
