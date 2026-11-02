@@ -1,4 +1,4 @@
-GIRGENTI ROADS™ — versione 1.0
+GIRGENTI ROADS™ — versione 1.6
 
 Il runner 3D del Capone per le strade di Agrigento.
 
@@ -19,7 +19,7 @@ COME SI GIOCA
 - Tocca (o Spazio) per saltare, tocca ancora in aria per il doppio salto.
 - Si corre da soli. Se un ostacolo ti blocca, lo schermo ti trascina: salta per scavalcarlo. Si perde una vita solo quando esci dallo schermo o cadi in una buca.
 - Tocca le persone per farle unire al gruppo: a fine livello ogni persona vale 100 punti, ogni moneta 10.
-- Ogni 100 monete = 1 vita in più (massimo 5).
+- Ogni 150 monete = 1 vita in più (massimo 3).
 - Ogni livello dura 2 minuti ed è più veloce e più difficile. Il livello cambia anche luce: giorno, pomeriggio, tramonto, notte.
 
 NOVITÀ DEI LIVELLI
@@ -29,3 +29,39 @@ NOVITÀ DEI LIVELLI
 
 FILE
 index.html · manifest.webmanifest · sw.js · vercel.json · robots.txt · icone · og-image.jpg · font Bungee (licenza OFL).
+
+NOVITÀ v1.6
+- Nuovo personaggio 3D, rifatto dal modello di riferimento: cappello di feltro con fascia scura, baffi a manubrio, naso, occhi grandi con sopracciglia, bocca aperta con denti, testa a microfono con le fessure laterali e sotto il mento, smoking con gilet e papillon, guanti bianchi e bastone col punto interrogativo (senza telefono).
+- Icone e favicon rifatte con il nuovo personaggio.
+
+NOVITÀ v1.5
+- Le vite sono al massimo 3 (si parte con 3). Ogni 150 monete si recupera una vita, ma mai oltre 3: il gioco è più difficile.
+- Classifica azzerata: i record salvati sul telefono ripartono da zero. Per azzerare anche la classifica mondiale va cancellato il nodo arcade/girgentiroads/top dal database Firebase (Realtime Database → Dati).
+
+NOVITÀ v1.4.2
+- Il pulsante "Prova anche gli altri giochi del Capone" ora apre la sala giochi indipendente: https://giochi.ilcaponequiz.win/ (in una nuova scheda). Il file giochi.html non serve più: si può togliere dal repository.
+
+NOVITÀ v1.4 (difficoltà a crescere)
+- Livello 2: a metà percorso il gioco accelera di colpo (+20%). Dal livello 3 lo scatto di metà livello è ancora più forte e ogni livello parte più veloce del precedente.
+- Dal livello 3: sempre più buche e sempre più auto che vengono contro (a coppie dal 3 in poi). Meno respiro tra un ostacolo e l'altro.
+- Livelli con orari e meteo diversi: 1 giorno · 2 pomeriggio · 3 TEMPORALE (pioggia, strada bagnata e lampi, meno aderenza) · 4 tramonto · 5 notte · 6 notte di tempesta · dal 7 si ripete a ruota.
+- Al buio e col tramonto si accendono i lampioni (con aloni e pozze di luce sulla strada), le finestre dei palazzi e i fari delle auto che arrivano.
+- File da caricare: solo index.html (sw.js cambia solo nel numero di versione).
+
+NOVITÀ v1.3
+- Musica di sottofondo "Inferno Cartella" (file audio/inferno.mp3), in loop con partenza dolce. Parte quando premi GIOCA, si ferma in pausa.
+- Tasto altoparlante sotto il tasto pausa per togliere o rimettere la musica (la scelta resta salvata).
+- Da caricare: index.html, sw.js e la cartella audio con inferno.mp3.
+
+NOVITÀ v1.2
+- Nuova pagina giochi.html: "La sala giochi di Alberto Seminerio, by Il Capone Quiz" con i 4 giochi (foto, descrizione e pulsante GIOCA) e i crediti in fondo. È un file unico (foto e font dentro).
+- Nel gioco i tre pulsanti sono sostituiti da uno solo: "Prova anche gli altri giochi del Capone", che apre giochi.html.
+- Per aggiungere un gioco apri giochi.html, cerca "var GAMES" e copia una riga: nome, descrizione, indirizzo e foto.
+- Le foto di Formula Anziani e Il Capone salsa e maionese sono segnaposto: mandami uno screenshot di ciascun gioco e le sostituisco.
+- Per gli altri giochi basta caricare lo stesso giochi.html e mettere il pulsante che punta all'indirizzo di questa pagina.
+
+NOVITÀ v1.1 (precedente)
+- Tasto PAUSA (in alto a destra, oppure P / Esc) con CONTINUA e TERMINA PARTITA: chi vuole smettere non deve più morire per forza. Terminando, il punteggio va comunque in classifica.
+- Il gioco va in pausa da solo se esci dalla pagina.
+- Nella schermata iniziale, a fine livello, in pausa e a game over: pulsanti per giocare agli altri giochi (Super Capone, Formula Anziani, Il Capone salsa e maionese) e crediti con i link a ilcaponequiz.win e albertoseminerio.com.
+- I link degli altri giochi si cambiano in index.html, nel blocco "window.GR_LINKS" (cerca "Link agli altri giochi"). Quello di Il Capone salsa e maionese è un indirizzo presunto: controllalo.
