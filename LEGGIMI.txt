@@ -1,4 +1,4 @@
-GIRGENTI ROADS™ — versione 1.6
+GIRGENTI ROADS™ — versione 1.7
 
 Il runner 3D del Capone per le strade di Agrigento.
 
@@ -30,6 +30,12 @@ NOVITÀ DEI LIVELLI
 FILE
 index.html · manifest.webmanifest · sw.js · vercel.json · robots.txt · icone · og-image.jpg · font Bungee (licenza OFL).
 
+NOVITÀ v1.7
+- Classifica MENSILE (come Super Capone): contano solo i punteggi del mese in corso. Il titolo diventa "TOP 10 DI NOVEMBRE", "TOP 10 DI DICEMBRE" e così via.
+- Il 1° del mese nuovo la classifica riparte da zero da sola: i punteggi del mese prima non vengono più mostrati e il primo punteggio del mese nuovo li sostituisce nel database. Non serve fare niente a mano.
+- Le regole Firebase restano le stesse (percorso arcade/girgentiroads/top).
+- Se vuoi conservare la classifica di un mese, fai uno screenshot la sera dell'ultimo giorno.
+
 NOVITÀ v1.6
 - Nuovo personaggio 3D, rifatto dal modello di riferimento: cappello di feltro con fascia scura, baffi a manubrio, naso, occhi grandi con sopracciglia, bocca aperta con denti, testa a microfono con le fessure laterali e sotto il mento, smoking con gilet e papillon, guanti bianchi e bastone col punto interrogativo (senza telefono).
 - Icone e favicon rifatte con il nuovo personaggio.
@@ -39,7 +45,7 @@ NOVITÀ v1.5
 - Classifica azzerata: i record salvati sul telefono ripartono da zero. Per azzerare anche la classifica mondiale va cancellato il nodo arcade/girgentiroads/top dal database Firebase (Realtime Database → Dati).
 
 NOVITÀ v1.4.2
-- Il pulsante "Prova anche gli altri giochi del Capone" ora apre la sala giochi indipendente: https://giochi.ilcaponequiz.win/ (in una nuova scheda). Il file giochi.html non serve più: si può togliere dal repository.
+- Il pulsante "Prova anche gli altri giochi del Capone" ora apre la sala giochi indipendente: https://salagiochi.ilcaponequiz.win/ (in una nuova scheda). Il file giochi.html non serve più: si può togliere dal repository.
 
 NOVITÀ v1.4 (difficoltà a crescere)
 - Livello 2: a metà percorso il gioco accelera di colpo (+20%). Dal livello 3 lo scatto di metà livello è ancora più forte e ogni livello parte più veloce del precedente.
