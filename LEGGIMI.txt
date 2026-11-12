@@ -1,4 +1,4 @@
-GIRGENTI ROADS™ — versione 1.8
+GIRGENTI ROADS™ — versione 1.9
 
 Il runner 3D del Capone per le strade di Agrigento.
 
@@ -29,6 +29,9 @@ NOVITÀ DEI LIVELLI
 
 FILE
 index.html · manifest.webmanifest · sw.js · vercel.json · robots.txt · icone · og-image.jpg · font Bungee (licenza OFL).
+
+NOVITÀ v1.9
+- La testa del pupazzo ora si muove insieme al corpo: gira nella capriola del doppio salto, ondeggia al ritmo della corsa, si piega all'indietro nel salto e si rannicchia mentre ruota.
 
 NOVITÀ v1.8
 - Il protagonista ora è il pupazzo ufficiale del Capone (testa a microfono con cappello e baffi, di profilo mentre corre), sempre ben visibile anche in mezzo alla folla.
